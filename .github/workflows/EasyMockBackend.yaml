@@ -14,4 +14,6 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '10.0.x'
-      - run: dotnet build
+      - name: Build Backend
+        working-directory: src/backend/EasyMock/EasyMock.Api
+        run: dotnet build
